@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import api from "../../services/api"
 import axios from "axios"
+
+import { FaPlus } from "react-icons/fa";
+
 export default function AddProduct() {
 
     const [nome, setNome] = useState();
@@ -27,13 +30,12 @@ export default function AddProduct() {
 
     return (
         <div >
-            <div className="d-flex justify-content-end px-4">
-            <button className="btn btn-primary " data-bs-toggle="modal" data-bs-target="#adicionar">
-                Cadastrar produto
-            </button>
-
+            <div className="d-flex justify-content-center px-4">
+                <button className="btn btn-primary " data-bs-toggle="modal" data-bs-target="#adicionar">
+                    <FaPlus size={20}/>
+                </button> 
             </div>
-            
+
             <div class="modal fade" id="adicionar" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -59,13 +61,13 @@ export default function AddProduct() {
                                     <label for="validationCustom04" className="form-label">Em estoque: </label>
                                     <input type="text" className="form-control" id="validationCustom04" value={estoque} onChange={(e) => setEstoque(e.target.value)} required />
                                 </div>
-
+                                
                                 <div className="col-12 my-2">
-                                    <button className="btn btn-primary" type="submit" >Submit form</button>
+                                    <button className="btn btn-primary" type="submit">Adicionar</button>
                                 </div>
                             </form>
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
