@@ -8,7 +8,7 @@ import {
 } from "../productController.js";
 const router = express.Router();
 // Rotas para os produtos
-router.post('/', createProduct);
+router.post('/add', createProduct);
 router.get('/', getProducts);
 router.get('/:id', getProduct);
 router.put('/:id', updateProduct);
